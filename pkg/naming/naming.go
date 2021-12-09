@@ -3,11 +3,11 @@ package naming
 import (
 	"fmt"
 
-	"github.com/kuangxc/child-naming/pkg/alg/naming"
-	"github.com/kuangxc/child-naming/pkg/conf"
-	"github.com/kuangxc/child-naming/pkg/data"
-	"github.com/kuangxc/child-naming/pkg/output"
-	"github.com/kuangxc/child-naming/pkg/types"
+	"github.com/Peakchen/child-naming/pkg/alg/naming"
+	"github.com/Peakchen/child-naming/pkg/conf"
+	"github.com/Peakchen/child-naming/pkg/data"
+	"github.com/Peakchen/child-naming/pkg/output"
+	"github.com/Peakchen/child-naming/pkg/types"
 )
 
 func Run() {

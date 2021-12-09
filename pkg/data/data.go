@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kuangxc/child-naming/pkg/types"
-	"github.com/kuangxc/child-naming/pkg/util"
+	"github.com/Peakchen/child-naming/pkg/types"
+	"github.com/Peakchen/child-naming/pkg/util"
 )
 
 var (

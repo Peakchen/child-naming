@@ -1,4 +1,4 @@
-module github.com/kuangxc/child-naming
+module github.com/Peakchen/child-naming
 
 go 1.13
 

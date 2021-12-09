@@ -5,8 +5,8 @@ import (
 
 	"bou.ke/monkey"
 
-	"github.com/kuangxc/child-naming/pkg/data"
-	"github.com/kuangxc/child-naming/pkg/types"
+	"github.com/Peakchen/child-naming/pkg/data"
+	"github.com/Peakchen/child-naming/pkg/types"
 )
 
 func TestGenerateNames(t *testing.T) {

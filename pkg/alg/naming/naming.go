@@ -3,10 +3,10 @@ package naming
 import (
 	"fmt"
 
-	split "github.com/kuangxc/child-naming/pkg/alg/splitword"
-	"github.com/kuangxc/child-naming/pkg/conf"
-	"github.com/kuangxc/child-naming/pkg/data"
-	"github.com/kuangxc/child-naming/pkg/types"
+	split "github.com/Peakchen/child-naming/pkg/alg/splitword"
+	"github.com/Peakchen/child-naming/pkg/conf"
+	"github.com/Peakchen/child-naming/pkg/data"
+	"github.com/Peakchen/child-naming/pkg/types"
 )
 
 func GenerateNames(surname string) chan *types.NameInfo {

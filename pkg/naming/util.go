@@ -3,7 +3,7 @@ package naming
 import (
 	"fmt"
 
-	"github.com/kuangxc/child-naming/pkg/types"
+	"github.com/Peakchen/child-naming/pkg/types"
 )
 
 func getWordPinyin(word string, ps []*types.Pinyin) (*types.Pinyin, error) {

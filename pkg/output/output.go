@@ -10,7 +10,7 @@ import (
 
 	"github.com/360EntSecGroup-Skylar/excelize"
 
-	"github.com/kuangxc/child-naming/pkg/types"
+	"github.com/Peakchen/child-naming/pkg/types"
 )
 
 const (

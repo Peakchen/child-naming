@@ -7,7 +7,7 @@ import (
 	"github.com/Peakchen/child-naming/pkg/util"
 )
 
-func filterExclude(srcNameChn chan *types.NameInfo, excludeWords []string,
+func FilterExclude(srcNameChn chan *types.NameInfo, excludeWords []string,
 	excludeNames []string) chan *types.NameInfo {
 	filterExcludeNameChn := make(chan *types.NameInfo, 100)
 	go func() {
@@ -34,7 +34,7 @@ func filterExclude(srcNameChn chan *types.NameInfo, excludeWords []string,
 	return filterExcludeNameChn
 }
 
-func filterInclude(srcNameChn chan *types.NameInfo, includeWords []string) chan *types.NameInfo {
+func FilterInclude(srcNameChn chan *types.NameInfo, includeWords []string) chan *types.NameInfo {
 	filterIncludeNameChn := make(chan *types.NameInfo, 100)
 	go func() {
 		for {
@@ -58,7 +58,7 @@ func filterInclude(srcNameChn chan *types.NameInfo, includeWords []string) chan 
 }
 
 //音调相关的问题
-func filtedPinyinDisharmony(srcNameChn chan *types.NameInfo, ps []*types.Pinyin) chan *types.NameInfo {
+func FiltedPinyinDisharmony(srcNameChn chan *types.NameInfo, ps []*types.Pinyin) chan *types.NameInfo {
 	resultNameChn := make(chan *types.NameInfo, 100)
 	go func() {
 		for {

@@ -6,7 +6,7 @@ import (
 	"github.com/Peakchen/child-naming/pkg/types"
 )
 
-func getWordPinyin(word string, ps []*types.Pinyin) (*types.Pinyin, error) {
+func GetWordPinyin(word string, ps []*types.Pinyin) (*types.Pinyin, error) {
 	for _, p := range ps {
 		if word == p.Word {
 			return p, nil

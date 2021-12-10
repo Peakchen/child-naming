@@ -69,7 +69,7 @@ func FiltedPinyinDisharmony(srcNameChn chan *types.NameInfo, ps []*types.Pinyin)
 			var pys []*types.Pinyin
 			rs := []rune(n.Name)
 			for i := 0; i < len(rs); i++ {
-				py, err := getWordPinyin(string(rs[i]), ps)
+				py, err := GetWordPinyin(string(rs[i]), ps)
 				if nil != err {
 					fmt.Printf("%s get pinyin err:%v \r\n", n.Name, err)
 					break

@@ -3,7 +3,7 @@ package naming
 import (
 	"fmt"
 
-	"github.com/Peakchen/child-naming/pkg/alg/naming"
+	"github.com/Peakchen/child-naming/pkg/alg/algnaming"
 	"github.com/Peakchen/child-naming/pkg/conf"
 	"github.com/Peakchen/child-naming/pkg/data"
 	"github.com/Peakchen/child-naming/pkg/output"
@@ -32,7 +32,7 @@ func Run() {
 		return
 	}
 	fmt.Println("start generate name ...")
-	rawNameChn := naming.GenerateNames(surnamePy.Word)
+	rawNameChn := algnaming.GenerateNames(surnamePy.Word)
 	//3.根据配置，剔除不符合要求的名字
 	filterExcludeNameChn := filterExclude(rawNameChn, conf.GetExcludeWords(), conf.GetExcludeNames())
 	//4. 剔除包含不常见字的名字

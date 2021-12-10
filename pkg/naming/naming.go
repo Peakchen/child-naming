@@ -27,7 +27,7 @@ func Run() {
 		return
 	}
 	//2.生成名字列表
-	surnamePy, err := naming.GetWordPinyin(conf.GetSurname(), ps)
+	surnamePy, err := GetWordPinyin(conf.GetSurname(), ps)
 	if nil != err {
 		fmt.Printf("%s pinyin not find,err:%v", conf.GetSurname(), err)
 		return
@@ -36,13 +36,13 @@ func Run() {
 	fmt.Println("start generate name ...")
 	rawNameChn := algnaming.GenerateNames(surnamePy.Word)
 	//3.根据配置，剔除不符合要求的名字
-	filterExcludeNameChn := naming.FilterExclude(rawNameChn, conf.GetExcludeWords(), conf.GetExcludeNames())
+	filterExcludeNameChn := FilterExclude(rawNameChn, conf.GetExcludeWords(), conf.GetExcludeNames())
 	//4. 剔除包含不常见字的名字
-	filteUncommonNameChn := naming.FilterInclude(filterExcludeNameChn, comWords)
+	filteUncommonNameChn := FilterInclude(filterExcludeNameChn, comWords)
 	//5.剔除与姓氏同声母的名字，例如吴王(wu wang)
 	//6.剔除连续韵母相同，例如于玉秋(yuyuqiu)
 	//7.根据拼音筛选平仄,避免同声，例如黄强
-	filterDisHanmonyNameChn := naming.FiltedPinyinDisharmony(filteUncommonNameChn, ps)
+	filterDisHanmonyNameChn := FiltedPinyinDisharmony(filteUncommonNameChn, ps)
 	//8.输出姓名
 	output.SaveExcel(filterDisHanmonyNameChn, conf.GetOutputNum())
 }
